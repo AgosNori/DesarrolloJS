@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Quicksand:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: cadetblue;
+}
+
+.container {
+    font-size: 16px;
+    /* tamaño de la fuente */
+    background-color: white;
+    /* color de fuente */
+    width: 90vh;
+    /* tamaño del container*/
+    max-width: 34em;
+    /* tamaño maximo */
+    position: relative;
+    /*posicion*/
+    transform: translate(60%, 90%);
+    padding: 3em;
+    border-radius: 20px;
+    box-shadow: 0 1.2em 2.4em rgba(0, 0, 0, 0.25);
+}
+#options-container{
+    text-align: center; /* alinea el texto al medio */
+}
+#options-container div{
+    width: 100%;  /* tamaño */
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2em 0 2.4em 0;
+}
+/* estilos cuando el boton esta desactivado */
+#options-container button:disabled{
+    border: 3px solid #666665;
+    color: grey;
+    background-color: #efefef;
+}
+/* estilos cuando el boton esta activado */
+#options-container button:active{
+    background-color: #8c52ff;
+    border: 3px solid black; /* bordes */
+    color: white; /* color de la letra */
+}
+.letter-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6em;
+}
+.letter-container button{
+    height: 2.4em;
+    width: 2.4em;
+    border-radius: 0.3em;
+    background-color: white;
+    cursor: pointer;
+}
+.new-game-popup{
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+#user-input-section{
+    display: flex;
+    justify-content: center;
+    font-size: 1.8em;
+    margin:  0.6em 0 1.2em 0;
+}
+canvas{
+    display: block;
+    margin: auto;
+    border: 10px solid rgb(61,61,98);
+    border-radius: 10px;
+}
+.hide{
+    display: none;
+}
+#result-text h2{
+    font-size: 1.8em;
+    text-align: center;
+}
+#result-text p{
+    font-size: 1.25em;
+    margin:  1em 0 2em 0 ;
+}
+#result-text span{
+    font-weight: 600;
+}
+#new-game-button{
+    font-size: 1.25em;
+    padding: 0.5em 1em;
+    background-color: #8c52ff;
+    color: white;
+    border: 3px solid black;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+.win-msg{
+    color: green;
+}
+.lose-msg{
+    color: red;
+}
