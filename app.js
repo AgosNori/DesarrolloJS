@@ -136,6 +136,20 @@ const initializer=()=>{
             // split()divide un objeto en string ( cadenas de texto)
             let charArray=chosenWord.split("");
             let dashes= document.getElementsByClassName("dashes");
+             
+            if (charArray.includes(button.innerText)){
+                charArray.forEach((char,index)=>{
+                    if (char === button.innerText){
+                        dashes[index].innerText= char;
+                        winCount += 1;
+                        // la funcion length les va a devolver la long de la palabra
+                        if (winCount=== charArray.length){
+                            resultText.innerHTML= `<h2 class="win-msg">Ganaste</h2>`;
+                            blocker();
+                        }
+                    }
+                })
+            }
         })
     }
 }
